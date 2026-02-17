@@ -1,0 +1,58 @@
+
+:root{
+  --card-width: 380px;
+  --accent: #1e88e5;
+  --muted: #666;
+  --border: 1px solid rgba(30,30,30,0.08);
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: 'Roboto', Arial, sans-serif;
+  background:linear-gradient(180deg,#f6f9fc,#ffffff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  margin:0;
+  padding:20px;
+}
+
+.container{width:100%;max-width:900px}
+
+.id-card{
+  width:var(--card-width);
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(30,30,30,0.08);
+  padding:18px;
+  border:var(--border);
+  margin:0 auto;
+}
+
+.card-header{border-bottom:2px solid rgba(30,30,30,0.04);padding-bottom:12px;margin-bottom:12px}
+.card-header .student-name{font-family:'Montserrat',sans-serif;margin:0;color:var(--accent);font-weight:700;font-size:1.35rem}
+.card-header .dept{margin:4px 0 0;color:var(--muted);font-size:0.9rem}
+
+.card-body{display:flex;gap:14px;align-items:center}
+.photo img{width:110px;height:110px;border-radius:8px;object-fit:cover;border:3px solid #f0f4fb}
+
+.info{flex:1}
+.info p{margin:6px 0;color:#333;font-size:0.95rem}
+.info p strong{color:#222;font-weight:600}
+
+.card-footer{border-top:1px dashed rgba(30,30,30,0.06);margin-top:12px;padding-top:10px;text-align:right}
+.card-id{color:var(--muted);font-size:0.85rem}
+
+#student-id-card{transition:transform .18s ease}
+#student-id-card:hover{transform:translateY(-6px)}
+
+.photo{border-right:1px solid rgba(30,30,30,0.03);padding-right:10px}
+
+small{font-size:0.8rem}
+
+@media (max-width:420px){
+  .id-card{width:100%;padding:14px}
+  .card-body{flex-direction:column;align-items:flex-start}
+  .photo img{width:100%;height:auto;border-radius:6px}
+}

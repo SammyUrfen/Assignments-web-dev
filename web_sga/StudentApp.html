@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2024EB02392</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.4;padding:18px;background:#f7f9fc}
+    .card{max-width:520px;margin:0 auto;background:#fff;padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    label{display:block;margin-top:12px;font-weight:600}
+    input[type=text], input[type=email]{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px}
+    input[readonly]{background:#f3f5f8}
+    .actions{margin-top:14px}
+    button{padding:8px 12px;border-radius:6px;border:none;background:#1e88e5;color:#fff;cursor:pointer}
+    .retrieve{margin-top:18px;padding:12px;border-top:1px dashed #eee}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Student ID Card Application</h2>
+    <form id="studentForm">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Full name" onfocusout="validateName()" />
+
+      <label for="dob">Date of Birth (dd/mm/yyyy)</label>
+      <input id="dob" name="dob" type="text" placeholder="dd/mm/yyyy" onfocusout="validateDOB()" />
+
+      <label for="age">Age (auto)</label>
+      <input id="age" name="age" type="text" readonly />
+
+      <label for="mobile">Mobile number</label>
+      <input id="mobile" name="mobile" type="text" placeholder="e.g., 9876543210" onfocusout="validateMobile()" />
+
+      <label for="email">Email ID</label>
+      <input id="email" name="email" type="email" placeholder="student@example.com" onfocusout="validateEmail()" />
+
+      <div class="actions">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <div class="retrieve" id="retrieveSection" style="display:none">
+      <h3>Retrieve Details</h3>
+      <label for="retrieveMobile">Mobile number</label>
+      <input id="retrieveMobile" type="text" placeholder="Enter mobile number to retrieve" />
+      <div style="margin-top:10px"><button id="retrieveBtn">retrieve cookie</button></div>
+    </div>
+  </div>
+
+  <script src="StudentApp.js"></script>
+</body>
+</html>
