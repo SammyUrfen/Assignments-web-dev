@@ -1,6 +1,4 @@
 # Ignore nested project repos
-1741481481-64803613-103085-master/
-
 # Dependencies and build artifacts
 node_modules/
 dist/
